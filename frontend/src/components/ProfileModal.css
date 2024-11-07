@@ -1,0 +1,21 @@
+.profile-input input{
+    margin-bottom: 1.5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    letter-spacing: 1px;
+    border: solid 1px rgb(150, 150, 150);
+}
+
+
+.profile-input input:focus{
+    outline: none;
+    border: solid 2px black;
+}
+
+.profile-modal-title{
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+    text-align: center;
+}

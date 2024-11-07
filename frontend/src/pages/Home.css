@@ -1,0 +1,118 @@
+.banner{
+    height: 70vh;
+    background-image:linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)) ,url('../images/banner1.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+
+}
+
+.home{
+    color: white !important;
+}
+
+.home-title{
+    font-size: 1.6rem;
+    color: rgb(2, 248, 252);
+    letter-spacing: 2px;
+}
+.product-card img{
+    height: 24rem;
+    width: 18rem;
+    object-fit: cover;
+    margin-bottom: 1rem;
+}
+
+.product-card:hover{
+    transform: scale(1.08);
+    box-shadow: 2px 6px 6px rgb(2, 248, 252);
+}
+
+.product-card{
+    position: relative;
+    overflow: hidden;
+    /* background-color: rgb(199, 199, 199); */
+    transition: all 0.2s ease-in-out;
+    /* border: solid 2.4px rgb(2, 248, 252); */
+
+}
+
+.product-icons{
+    position: absolute;
+    top: 10px;
+    right: -20px;
+    transition: all 0.3s ease;
+}
+
+.product-card:hover .product-icons{
+    right: 10px;
+}
+
+.ratings i{
+    font-size: 0.7rem;
+}
+
+.product-title{
+    font-size: 1.3rem;
+    letter-spacing: 1.2px;
+}
+.shop-btns button{
+    border: solid 1px rgb(2, 248, 252);
+    color: rgb(2, 248, 252);
+    background-color: transparent;
+    outline: none;
+    width: 48%;
+    transition: all 0.3s ease-in-out;
+}
+
+.shop-btns button:hover{
+    background-color: rgb(2, 248, 252);
+    color: white;
+}
+
+.promo video{
+    object-fit: cover;
+    height: 60vh !important;
+    width: 100%;
+
+}
+.blog-card{
+    transition: all 0.3s ease;
+}
+
+.blog-card img{
+    height: 24rem;
+    width: 25rem;
+    object-fit: cover;
+    margin-bottom: 1rem;
+
+}
+
+.blog-title{
+    font-size: 1.4rem;
+}
+.blog-desc{
+    font-size: 0.8rem;
+    color: rgb(203, 203, 203);
+}
+
+.blog-card:hover{
+    transform: scale(1.08);
+    box-shadow: 2px 6px 6px rgb(2, 248, 252);
+}
+
+
+.our-services i{
+    font-size: 3.5rem;
+    color: rgb(2, 248, 252);
+}
+.our-service-body .title{
+    font-size: 1.1rem;
+}
+
+.our-service-body .desc{
+    font-size: 0.8rem;
+    margin-top: -10px;
+    color: rgb(203, 203, 203);
+}

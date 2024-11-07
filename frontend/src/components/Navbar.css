@@ -1,0 +1,93 @@
+.navbar{
+    color: white !important;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    background-color: black !important;
+    box-shadow: 2px 3px 6px rgba(2, 248,252, 0.7);
+
+}
+
+.navbar-brand{
+    width: 8.5rem;
+}
+
+.navbar-collapse{
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+.nav-link{
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+    color: white !important;
+    margin-right: 1.7rem;
+}
+
+.nav-btn{
+    outline: none;
+    border: solid 1px rgb(2, 248,252);
+    font-size: 0.9rem;
+    background-color: black;
+    color: rgb(2, 248,252);
+    letter-spacing: 1px;
+    transition: all 0.4s ease;
+}
+
+.nav-btn:hover{
+    background-color: rgb(2, 248,252);
+    color: white;
+}
+
+.active{
+    color: rgb(2, 248,252) !important;
+    font-weight: 500 !important;
+}
+
+.drawer-profile{
+    background-color: rgb(2,248,252) !important;
+    color: black;
+    margin-top: 4.3rem;
+}
+
+.drawer-profile .profile:hover{
+    background-color: black;
+    color: rgb(2, 248,252);
+}
+
+.drawer-profile .cart:hover{
+    background-color: black;
+    color: rgb(2, 248,252);
+}
+
+.drawer-profile .orders:hover{
+    background-color: black;
+    color: rgb(2, 248,252);
+}
+
+.drawer-profile .wishlist:hover{
+    background-color: black;
+    color: rgb(2, 248,252);
+}
+
+.logout{
+    border: solid 2px black;
+    background-color: transparent;
+    color: black;
+    transition: all 0.3s ease;
+}
+
+.logout:hover{
+    background-color: black;
+    color: rgb(2, 248,252);
+}
+
+
+
+.drawer-profile div i{
+    font-size: 1.5rem;
+}
+
+.drawer-profile div p{
+    font-size: 1.1rem;
+    letter-spacing: 1.2px;
+}
