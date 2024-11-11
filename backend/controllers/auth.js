@@ -15,13 +15,3 @@ exports.createOrUpdateUser = async(req, res)=>{
         res.status(400).json(err)
     })
 }
-
-exports.getUser = async(req, res)=>{
-    try{
-        let {email} = req.user 
-        let user = await User.findOne({email}).exec()
-        res.status(200).json(user)
-    }catch(err){
-        res.status(400).json(err)
-    }
-}

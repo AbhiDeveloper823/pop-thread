@@ -2,9 +2,10 @@ import React, {useState} from 'react'
 import {useDispatch} from 'react-redux'
 import './Login.css'
 import {auth, googleAuthProvider} from '../../firebase'
-import {Modal} from 'antd'
+import {Modal, message} from 'antd'
 import {useNavigate} from 'react-router-dom'
 import { createOrUpdateUser } from '../../functions/auth'
+import { toast } from 'react-toastify'
 
 const Login = ()=>{
     const dispatch = useDispatch()
@@ -26,7 +27,8 @@ const Login = ()=>{
                         type:'LOGGED_IN_USER',
                         payload:{
                             email,
-                            token:idTokenResult.token
+                            token:idTokenResult.token,
+                            role:result.data.role
                         }
                     })
     
@@ -34,13 +36,14 @@ const Login = ()=>{
                     navigate('/')
                     setEmail('')
                     setPassword('')
+
+                    toast.success(`Welcome ${email}`)
                 }).catch((err)=>{
                     console.log(err)
                 })
                 
 
             }).catch((err)=>{
-                console.log(err)
                 setLoading(false)
                 setEmail('')
                 setPassword('')
@@ -62,7 +65,7 @@ const Login = ()=>{
         window.localStorage.setItem('email', regEmail)
 
         setRegEmail("")
-        alert("REGISTRATION LINK HAS BEEN SENT TO YOUR EMAIL!!")
+        toast.info(`Registration link is sent to ${regEmail}.`)
         setIsModalOpen(false)
 
     }
@@ -71,21 +74,30 @@ const Login = ()=>{
         await auth.signInWithPopup(googleAuthProvider).then(async(result)=>{
             const idTokenResult = await result.user.getIdTokenResult()
 
-            dispatch({
-                type:'LOGGED_IN_USER',
-                payload:{
-                    email:result.user.email,
-                    token:idTokenResult.token
-                }
-            })
+            await createOrUpdateUser(idTokenResult.token).then((result)=>{
+                    dispatch({
+                        type:'LOGGED_IN_USER',
+                        payload:{
+                            email,
+                            token:idTokenResult.token,
+                            role:result.data.role
+                        }
+                    })
+    
+                    setLoading(false)
+                    navigate('/')
+                    setEmail('')
+                    setPassword('')
 
-            navigate('/main')
-
+                    toast.success(`Welcome ${email}`)
+                }).catch((err)=>{
+                    console.log(err)
+                })
         })
     }
 
     return(
-        <>  
+        <>
             <section className="login-page">
                 
                     <div className='row'>

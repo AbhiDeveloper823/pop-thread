@@ -5,6 +5,7 @@ import {useSelector ,useDispatch} from 'react-redux'
 import {Drawer} from 'antd'
 import ProfileModal from './ProfileModal'
 import firebase  from 'firebase/compat/app'
+import { toast } from 'react-toastify'
 
 const Navbar = ()=>{
     const [isUserDrawerOpen, setIsUserDrawerOpen] = useState(false)
@@ -26,8 +27,10 @@ const Navbar = ()=>{
         setIsProfileModalOpen(false)
     }
 
+
     const handleLogout = ()=>{
         firebase.auth().signOut()
+        toast.success('Thank You for visiting us!!')
 
         dispatch({
             type:"LOG_OUT",
@@ -40,7 +43,7 @@ const Navbar = ()=>{
     return(
         <>
         <nav class="navbar navbar-expand-lg text-white px-4 fixed-top">
-            <img src='media/logo2.png' onClick={()=>navigate('/')} className='navbar-brand py-2'/>
+            <img src='logo2.png' onClick={()=>navigate('/')} className='navbar-brand py-2'/>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -85,18 +88,25 @@ const Navbar = ()=>{
                 <i className='fa fa-user mr-4'></i>
                 <p>Profile</p>
             </div>
-            <div className='d-flex mb-3 cart pl-3 pt-4'>
+            <div className='d-flex mb-3 cart pl-3 pt-4' onClick={()=>navigate('/cart')}>
                 <i className='fa fa-shopping-cart mr-4'></i>
                 <p>Cart</p>
             </div>
-            <div className='d-flex mb-3 wishlist pl-3 pt-4'>
-                <i className='fa fa-heart mr-4'></i>
-                <p>Wishlist</p>
-            </div>
-            <div className='d-flex mb-3 orders pl-3 pt-4'>
+            <div className='d-flex mb-3 orders pl-3 pt-4' onClick={()=>navigate('/order')}>
                 <i className='fa fa-archive mr-4'></i>
                 <p>Orders</p>
             </div>
+            {user && user.role == "seller" ? 
+                <>
+                    <div className='d-flex mb-3 orders pl-3 pt-4' onClick={()=>navigate('/dashboard/products')}>
+                        <i className='fa fa-area-chart mr-4'></i>
+                        <p>Dashboard</p>
+                    </div>
+                </> : 
+                <>
+                </>
+            }
+
             {user ? <>
                 <button className='logout w-100 px-3 py-2 mt-3' onClick={handleLogout}>
                 Logout
@@ -106,6 +116,7 @@ const Navbar = ()=>{
         </Drawer>
 
         <ProfileModal isProfileModalOpen={isProfileModalOpen} handleClose={handleClose}/>
+        
         </>
     )
 

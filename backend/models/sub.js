@@ -10,10 +10,6 @@ const subSchema = new mongoose.Schema({
         type: String,
         required:true
     },
-    category:{
-        type:ObjectId,
-        ref:'Category'
-    }
 }, {timestamps: true})
 
 module.exports = mongoose.model('Sub', subSchema)

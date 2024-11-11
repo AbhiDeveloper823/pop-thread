@@ -10,8 +10,14 @@ const userSchema = new mongoose.Schema({
     name:{
         type:String
     },
-    info:{
-        type:Object
+    address:{
+        type:String
+    },
+    phone:{
+        type:Number
+    },
+    dob:{
+        type:String
     },
     role:{
         type:String,

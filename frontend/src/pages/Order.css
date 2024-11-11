@@ -1,0 +1,17 @@
+.order{
+    margin-top: 71.58px;
+}
+
+.single-order{
+    border: solid 1px rgb(2,248,252);
+    transition: all 0.3s ease;
+}
+
+.single-order:hover{
+    background-color: rgb(2,248,252);
+    color: black;
+}
+
+.highlight{
+    font-weight: bold;
+}

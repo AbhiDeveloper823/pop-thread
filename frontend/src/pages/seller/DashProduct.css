@@ -1,0 +1,78 @@
+.dashboard{
+    margin-top: 71.58px !important;
+}
+
+.product-modal-title{
+    font-size: 1.2rem;
+    letter-spacing: 1.2px;
+    text-align: center;
+}
+
+.product-form input, textarea, select{
+    border: solid 1.5px black;
+}
+
+.create-product{
+    background-color: transparent;
+    font-size: 1.1rem;
+    letter-spacing: 1.1px;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.create-product:hover{
+    background-color: black;
+    color: white;
+}
+
+.dash-title{
+    font-size: 2rem;
+    letter-spacing: 1.2px;
+    color: rgb(2, 248, 252);
+}
+
+.dash-btn{
+    background-color: transparent;
+    border: solid 1.2px rgb(2, 248, 252);
+    color: rgb(2, 248, 252);
+    transition: all 0.3s ease;
+}
+
+.dash-btn:hover{
+    background-color: rgb(2, 248, 252);
+    color: black;
+}
+
+.dash-single-product{
+    border: solid 1px rgb(2, 248, 252); 
+    color: rgb(2, 248, 252);
+    transition: all 0.3s ease;
+}
+
+.dash-single-product:hover{
+    border: solid 1px rgb(2, 248, 252); 
+    background-color: rgb(2, 248, 252);
+    color: black;
+    transform: scale(1.05);
+}
+
+.dash-single-product i{
+    font-size: 1.1rem;
+}
+
+.fa-pencil{
+    color: yellow !important;
+}
+
+.fa-trash{
+    color: rgb(255, 10, 10) !important;
+}
+
+.single-order{
+    color:rgb(2, 248, 252) !important;
+    transition: all 0.3s ease;
+}
+.single-order:hover{
+    color: black !important;
+    transform: scale(1.05);
+}

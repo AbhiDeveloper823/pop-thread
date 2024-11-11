@@ -1,0 +1,53 @@
+.user-cart{
+    margin-top: 71.58px;
+}
+
+.single-cart-product{
+    border: solid 1px rgb(2,248,252) !important;
+}
+
+.single-cart-product img{
+    height: 100px;
+    width: 100px;
+    object-fit: cover;
+}
+
+.cart-checkout-bill{
+    background-color: rgb(2,248,252);
+}
+
+.cart-checkout-bill .title{
+    font-size: 1.2rem;
+    letter-spacing: 1.2px;
+}
+
+.cart-checkout-bill button{
+    border: solid 1.2px black;
+    color: black;
+    letter-spacing: 1.2px;
+    background-color: transparent;
+    transition: all 0.3s ease;
+}
+
+.cart-checkout-bill button:hover{
+    background-color: black;
+    color: rgb(2,248,252);
+}
+
+.cont-shop-btn{
+    border: solid 1.2px rgb(2,248,252);
+    color: rgb(2,248,252);
+    background-color: transparent;
+    transition: all 0.3s ease;
+}
+
+.cont-shop-btn:hover{
+    background-color: rgb(2,248,252);
+    color: black;
+}
+
+.cont-shop-text{
+    color: rgb(2,248,252);
+    font-size: 2rem;
+    letter-spacing: 2px;
+}

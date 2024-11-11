@@ -36,9 +36,15 @@ const productSchema = new mongoose.Schema({
         type:Number,
         required:true
     },
-    images:[],
+    imgUrl:{
+        type:String
+    },
     sold:{
         type:Number
+    },
+    seller:{
+        type:ObjectId,
+        ref:'User'
     },
     ratings:[
         {

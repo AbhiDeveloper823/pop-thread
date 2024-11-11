@@ -1,0 +1,12 @@
+.footer{
+    background-color: rgb(2, 248, 252);
+    color: black;
+    text-align: center;
+}
+.footer div{
+    font-size: 0.8rem;
+    letter-spacing: 1.3px;
+}
+.footer div span{
+    font-weight: bold;
+}

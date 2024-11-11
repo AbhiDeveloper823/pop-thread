@@ -22,6 +22,7 @@ exports.readCategory = async(req, res)=>{
 
 exports.createCategory = async(req, res)=>{
     try {
+        console.log(req.body)
         let {name} = req.body
         let newCategory = await new Category({name, slug:slugify(name)}).save()
         res.status(200).json(newCategory)
@@ -39,7 +40,7 @@ exports.updateCategory = async(req, res)=>{
         res.status(200).json(updated)
     } catch (error) {
         console.log(error)
-        res.status(400).json({'err':`${slug} was not updated!!`})
+        res.status(400).json({'err':`Category was not updated!!`})
     }
 }
 

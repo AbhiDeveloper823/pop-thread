@@ -1,4 +1,5 @@
 const mongoose = require('mongoose')
+const {ObjectId} = mongoose.Schema
 
 const blogSchema = new mongoose.Schema({
     title:{
@@ -13,7 +14,13 @@ const blogSchema = new mongoose.Schema({
         type:String,
         required:true
     },
-    images:Array
+    imgUrl:{
+        type:String,
+    },
+    postedBy:{
+        type:ObjectId,
+        ref:'User'
+    }
 }, {timestamps:true})
 
 module.exports = mongoose.model('Blog', blogSchema)

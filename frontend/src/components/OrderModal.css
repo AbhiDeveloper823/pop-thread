@@ -1,0 +1,8 @@
+.single-order{
+    border: solid 1px black;
+}
+.order-modal-title{
+    text-align: center;
+    letter-spacing: 1.2px;
+    font-size: 1.3rem;
+}
